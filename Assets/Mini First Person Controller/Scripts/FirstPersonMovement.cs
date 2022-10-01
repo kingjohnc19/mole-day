@@ -4,7 +4,8 @@ using UnityEngine;
 public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
-
+    public GameObject cursor;
+    public GameObject camera;
     [Header("Running")]
     public bool canRun = true;
     public bool IsRunning { get; private set; }
@@ -40,5 +41,18 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply movement.
         rigidbody.velocity = transform.rotation * new Vector3(targetVelocity.x, rigidbody.velocity.y, targetVelocity.y);
+
+        //Cursor
+        RaycastHit hit;
+        if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 2))
+        {
+            if (hit.collider.tag == "Interactable")
+            {
+                cursor.SetActive(true);
+            }
+        } else
+        {
+            cursor.SetActive(false);
+        }
     }
 }
