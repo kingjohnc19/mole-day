@@ -16,6 +16,7 @@ public class FirstPersonMovement : MonoBehaviour
     private bool touchingWater;
     private bool inSubmarine;
     public Material skybox;
+    public Material darkSkybox;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -80,7 +81,7 @@ public class FirstPersonMovement : MonoBehaviour
         {
             touchingWater = true;
             RenderSettings.ambientLight = Color.black;
-            RenderSettings.skybox = null;
+            RenderSettings.skybox = darkSkybox;
             RenderSettings.fogColor = Color.black;
             RenderSettings.fogStartDistance = 5;
             RenderSettings.fogEndDistance = 20;
