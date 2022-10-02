@@ -12,6 +12,10 @@ public class FirstPersonMovement : MonoBehaviour
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
+    public GameObject tint;
+    private bool touchingWater;
+    private bool inSubmarine;
+    public Material skybox;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -59,6 +63,48 @@ public class FirstPersonMovement : MonoBehaviour
         } else
         {
             cursor.SetActive(false);
+        }
+
+        if (touchingWater && !inSubmarine)
+        {
+            tint.SetActive(true);
+        } else
+        {
+            tint.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.tag == "Water")
+        {
+            touchingWater = true;
+            RenderSettings.ambientLight = Color.black;
+            RenderSettings.skybox = null;
+            RenderSettings.fogColor = Color.black;
+            RenderSettings.fogStartDistance = 5;
+            RenderSettings.fogEndDistance = 20;
+        }
+        if (collision.transform.tag == "Submarine")
+        {
+            inSubmarine = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.transform.tag == "Water")
+        {
+            touchingWater = false;
+            RenderSettings.ambientLight = Color.gray;
+            RenderSettings.skybox = skybox;
+            RenderSettings.fogColor = Color.white;
+            RenderSettings.fogStartDistance = 15;
+            RenderSettings.fogEndDistance = 85;
+        }
+        if (collision.transform.tag == "Submarine")
+        {
+            inSubmarine = false;
         }
     }
 }
