@@ -14,55 +14,62 @@ public class Quiz : MonoBehaviour
     public bool correct;
     public bool quizActive = false;
     public TextMeshProUGUI caption;
+    public Image image;
+    public Sprite correctSprite;
+    public Sprite incorrectSprite;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        image.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (correctAns)
+        if (quizActive && !answered)
         {
-            case 0:
-                if (button[0].selected)
-                {
-                    answered = true;
-                    correct = true;
-                }
-                else if (button[1].selected || button[2].selected)
-                {
-                    answered = true;
-                    correct = false;
-                }
-                break;
-            case 1:
-                if (button[1].selected)
-                {
-                    answered = true;
-                    correct = true;
-                }
-                else if (button[0].selected || button[2].selected)
-                {
-                    answered = true;
-                    correct = false;
-                }
-                break;
-            case 2:
-                if (button[2].selected)
-                {
-                    answered = true;
-                    correct = true;
-                }
-                else if (button[0].selected || button[1].selected)
-                {
-                    answered = true;
-                    correct = false;
-                }
-                break;
+            switch (correctAns)
+            {
+                case 0:
+                    if (button[0].selected)
+                    {
+                        answered = true;
+                        correct = true;
+                    }
+                    else if (button[1].selected || button[2].selected)
+                    {
+                        answered = true;
+                        correct = false;
+                    }
+                    break;
+                case 1:
+                    if (button[1].selected)
+                    {
+                        answered = true;
+                        correct = true;
+                    }
+                    else if (button[0].selected || button[2].selected)
+                    {
+                        answered = true;
+                        correct = false;
+                    }
+                    break;
+                case 2:
+                    if (button[2].selected)
+                    {
+                        answered = true;
+                        correct = true;
+                    }
+                    else if (button[0].selected || button[1].selected)
+                    {
+                        answered = true;
+                        correct = false;
+                    }
+                    break;
+            }
         }
+
 
         if (answered && quizActive)
         {
@@ -82,17 +89,25 @@ public class Quiz : MonoBehaviour
 
     IEnumerator EndQuiz()
     {
+        if (correct)
+        {
+            caption.text = "Correct!";
+            image.gameObject.SetActive(true);
+            image.sprite = correctSprite;
+        } else
+        {
+            caption.text = "Incorrect...";
+            image.gameObject.SetActive(true);
+            image.sprite = incorrectSprite;
+        }
         foreach (Button but in button)
         {
             but.buttonWrong();
+            but.selected = false;
         }
         button[correctAns].buttonRight();
-        yield return new WaitForSeconds(5);
-        foreach (Button but in button)
-        {
-            but.buttonInactive();
-        }
-        caption.text = "";
+        yield return new WaitForSeconds(3f);
+        image.gameObject.SetActive(false);
         quizActive = false;
     }
 }

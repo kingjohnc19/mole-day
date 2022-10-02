@@ -5,6 +5,7 @@ public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
     public GameObject cursor;
+    public bool hovering;
     public GameObject camera;
     [Header("Running")]
     public bool canRun = true;
@@ -49,6 +50,11 @@ public class FirstPersonMovement : MonoBehaviour
             if (hit.collider.tag == "Interactable")
             {
                 cursor.SetActive(true);
+                hovering = true;
+            } else
+            {
+                cursor.SetActive(false);
+                hovering = false;
             }
         } else
         {

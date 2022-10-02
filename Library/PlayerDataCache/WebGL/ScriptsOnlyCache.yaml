@@ -1,10 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Button
     - FirstPersonLook
     - FirstPersonMovement
     - GroundCheck
     - Jump
+    - Main
+    - Quiz
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -13,10 +16,17 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -80,23 +90,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1970}
+      Script: {instanceID: 1646}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 1982}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 3746}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 4374}
+      Script: {instanceID: 2754}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 5440}
+      Script: {instanceID: 3158}
     - Class: 114
-      Script: {instanceID: 5816}
+      Script: {instanceID: 3492}
     - Class: 114
-      Script: {instanceID: 8560}
+      Script: {instanceID: 3706}
+    - Class: 114
+      Script: {instanceID: 4308}
+    - Class: 114
+      Script: {instanceID: 4580}
+    - Class: 114
+      Script: {instanceID: 5346}
+    - Class: 114
+      Script: {instanceID: 5712}
+    - Class: 114
+      Script: {instanceID: 5962}
+    - Class: 114
+      Script: {instanceID: 6114}
+    - Class: 114
+      Script: {instanceID: 6458}
+    - Class: 114
+      Script: {instanceID: 7798}
+    - Class: 114
+      Script: {instanceID: 8400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -115,7 +143,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
     - Class: 218
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
@@ -178,7 +212,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 4130fb5535c2949744e7302411f426a0
+      Hash: e750a7684f42f377d4c332cebd1e3cc7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FirstPersonMovement
@@ -346,6 +380,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 67cc5a6bfb5831d83bce96cae3370634
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Quiz
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -392,6 +432,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: VariablesAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 1812b3662b2c7410a56980e061649217
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -872,6 +918,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2005fe8afd024a947f49c8c45bc3d92e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Main
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

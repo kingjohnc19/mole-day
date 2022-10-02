@@ -5,6 +5,7 @@ using UnityEngine;
 public class Main : MonoBehaviour
 {
     public Quiz question1;
+    public Quiz question2;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,10 @@ public class Main : MonoBehaviour
         if (question1.quizActive == false && question1.answered == false)
         {
             question1.StartQuiz();
+        }
+        if (question1.answered == true && question1.quizActive == false && question2.quizActive == false && question2.answered == false)
+        {
+            question2.StartQuiz();
         }
     }
 }

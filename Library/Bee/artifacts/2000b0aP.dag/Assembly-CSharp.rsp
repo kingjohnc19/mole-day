@@ -296,6 +296,9 @@
 "Assets/Mini First Person Controller/Scripts/Components/Zoom.cs"
 "Assets/Mini First Person Controller/Scripts/FirstPersonLook.cs"
 "Assets/Mini First Person Controller/Scripts/FirstPersonMovement.cs"
+"Assets/Scripts/Button.cs"
+"Assets/Scripts/Main.cs"
+"Assets/Scripts/Quiz.cs"
 -langversion:9.0
 
 /deterministic

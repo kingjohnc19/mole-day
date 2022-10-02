@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cursorHovering && active && Vector3.Distance(transform.position, player.transform.position) <= 2)
+        if (cursorHovering && active && player.GetComponent<FirstPersonMovement>().hovering)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -49,6 +49,7 @@ public class Button : MonoBehaviour
         GetComponent<MeshRenderer>().material = activeMat;
         letter.SetActive(true);
         active = true;
+        gameObject.tag = "Interactable";
     }
 
     public void buttonInactive()
@@ -56,17 +57,20 @@ public class Button : MonoBehaviour
         GetComponent<MeshRenderer>().material = inactiveMat;
         letter.SetActive(false);
         active = false;
+        gameObject.tag = "Untagged";
     }
 
     public void buttonWrong()
     {
         GetComponent<MeshRenderer>().material = wrongMat;
         active = false;
+        gameObject.tag = "Untagged";
     }
 
     public void buttonRight()
     {
         GetComponent<MeshRenderer>().material = rightMat;
         active = false;
+        gameObject.tag = "Untagged";
     }
 }
