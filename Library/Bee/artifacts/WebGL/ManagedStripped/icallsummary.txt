@@ -455,6 +455,11 @@ UnityEngine.Renderer::GetMaterial
 UnityEngine.Renderer::GetSharedMaterial
 UnityEngine.Rendering.GraphicsSettings::get_lightsUseLinearIntensity
 UnityEngine.Rendering.ScriptableRenderContext::GetCameras_Internal_Injected
+UnityEngine.RenderSettings::set_ambientLight_Injected
+UnityEngine.RenderSettings::set_fogColor_Injected
+UnityEngine.RenderSettings::set_fogEndDistance
+UnityEngine.RenderSettings::set_fogStartDistance
+UnityEngine.RenderSettings::set_skybox
 UnityEngine.RenderTexture::get_height
 UnityEngine.RenderTexture::get_width
 UnityEngine.RenderTexture::GetColorBuffer_Injected

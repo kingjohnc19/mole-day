@@ -2088,6 +2088,30 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Rendering.ScriptableRenderContext
 
+	//Start Registrations for type : UnityEngine.RenderSettings
+
+		//System.Void UnityEngine.RenderSettings::set_ambientLight_Injected(UnityEngine.Color&)
+		void Register_UnityEngine_RenderSettings_set_ambientLight_Injected();
+		Register_UnityEngine_RenderSettings_set_ambientLight_Injected();
+
+		//System.Void UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)
+		void Register_UnityEngine_RenderSettings_set_fogColor_Injected();
+		Register_UnityEngine_RenderSettings_set_fogColor_Injected();
+
+		//System.Void UnityEngine.RenderSettings::set_fogEndDistance(System.Single)
+		void Register_UnityEngine_RenderSettings_set_fogEndDistance();
+		Register_UnityEngine_RenderSettings_set_fogEndDistance();
+
+		//System.Void UnityEngine.RenderSettings::set_fogStartDistance(System.Single)
+		void Register_UnityEngine_RenderSettings_set_fogStartDistance();
+		Register_UnityEngine_RenderSettings_set_fogStartDistance();
+
+		//System.Void UnityEngine.RenderSettings::set_skybox(UnityEngine.Material)
+		void Register_UnityEngine_RenderSettings_set_skybox();
+		Register_UnityEngine_RenderSettings_set_skybox();
+
+	//End Registrations for type : UnityEngine.RenderSettings
+
 	//Start Registrations for type : UnityEngine.RenderTexture
 
 		//System.Int32 UnityEngine.RenderTexture::get_height()

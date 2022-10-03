@@ -14,14 +14,13 @@ public class Quiz : MonoBehaviour
     public bool correct;
     public bool quizActive = false;
     public TextMeshProUGUI caption;
-    public Image image;
-    public Sprite correctSprite;
-    public Sprite incorrectSprite;
+    public Image rightImage;
+    public Image wrongImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        image.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -87,18 +86,16 @@ public class Quiz : MonoBehaviour
         quizActive = true;
     }
 
-    IEnumerator EndQuiz()
+    public IEnumerator EndQuiz()
     {
         if (correct)
         {
             caption.text = "Correct!";
-            image.gameObject.SetActive(true);
-            image.sprite = correctSprite;
+            rightImage.gameObject.SetActive(true);
         } else
         {
             caption.text = "Incorrect...";
-            image.gameObject.SetActive(true);
-            image.sprite = incorrectSprite;
+            wrongImage.gameObject.SetActive(true);
         }
         foreach (Button but in button)
         {
@@ -107,7 +104,9 @@ public class Quiz : MonoBehaviour
         }
         button[correctAns].buttonRight();
         yield return new WaitForSeconds(3f);
-        image.gameObject.SetActive(false);
         quizActive = false;
+        rightImage.gameObject.SetActive(false);
+        wrongImage.gameObject.SetActive(false);
+        yield break;
     }
 }
