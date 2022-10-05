@@ -146,35 +146,43 @@ extern void Button_buttonWrong_m18054BB637478EA2009DB494815CDCBF931B7894 (void);
 extern void Button_buttonRight_m825490755267C44C5A2F7EE9C5BE6CBB8F334B7C (void);
 // 0x00000043 System.Void Button::.ctor()
 extern void Button__ctor_m6CC103D3CBE7ABCDC685DCC02F320D62DCC05D16 (void);
-// 0x00000044 System.Void Main::Start()
+// 0x00000044 System.Void CollisionTrigger::Start()
+extern void CollisionTrigger_Start_m348E50A4E29C33A5A7FBEE67D3E2ABCB176ED818 (void);
+// 0x00000045 System.Void CollisionTrigger::Update()
+extern void CollisionTrigger_Update_m2AA0A3EDFE0FB4B389605BFACE60B61CEDCFD198 (void);
+// 0x00000046 System.Void CollisionTrigger::OnTriggerEnter(UnityEngine.Collider)
+extern void CollisionTrigger_OnTriggerEnter_m9D78045A1E926C96551E7B6285F578DC1C53F5A3 (void);
+// 0x00000047 System.Void CollisionTrigger::.ctor()
+extern void CollisionTrigger__ctor_m4B74BF0FFAD0B10A01236F32592566B88E81DA2D (void);
+// 0x00000048 System.Void Main::Start()
 extern void Main_Start_m5864CE07B60D35921FE23903087087FC5C3CF8FD (void);
-// 0x00000045 System.Void Main::Update()
+// 0x00000049 System.Void Main::Update()
 extern void Main_Update_m6A75833947272413C503ECE10B0D91F56F193526 (void);
-// 0x00000046 System.Void Main::.ctor()
+// 0x0000004A System.Void Main::.ctor()
 extern void Main__ctor_mC5886B5D00EEF6A6D8F96F3A84762F8AD71E51B6 (void);
-// 0x00000047 System.Void Quiz::Start()
+// 0x0000004B System.Void Quiz::Start()
 extern void Quiz_Start_mC71F7546C3B3453D5B6CB864A4F4DB411BD71273 (void);
-// 0x00000048 System.Void Quiz::Update()
+// 0x0000004C System.Void Quiz::Update()
 extern void Quiz_Update_m015DC475E4F54A1A93BBE452CB3903F67121A1F8 (void);
-// 0x00000049 System.Void Quiz::StartQuiz()
+// 0x0000004D System.Void Quiz::StartQuiz()
 extern void Quiz_StartQuiz_m8823C6FC6D50FD16474BE13C2A6FB7BB15B2E3CE (void);
-// 0x0000004A System.Collections.IEnumerator Quiz::EndQuiz()
+// 0x0000004E System.Collections.IEnumerator Quiz::EndQuiz()
 extern void Quiz_EndQuiz_m82ECFF61E116CD99610E687386DFA58BFAF4DD17 (void);
-// 0x0000004B System.Void Quiz::.ctor()
+// 0x0000004F System.Void Quiz::.ctor()
 extern void Quiz__ctor_m4D02464E441FA54DA7852D92BD7DB12237BFB4EB (void);
-// 0x0000004C System.Void Quiz/<EndQuiz>d__12::.ctor(System.Int32)
+// 0x00000050 System.Void Quiz/<EndQuiz>d__12::.ctor(System.Int32)
 extern void U3CEndQuizU3Ed__12__ctor_mE1A6D05E5C82A498C8E336694E8ABD7766FFBE43 (void);
-// 0x0000004D System.Void Quiz/<EndQuiz>d__12::System.IDisposable.Dispose()
+// 0x00000051 System.Void Quiz/<EndQuiz>d__12::System.IDisposable.Dispose()
 extern void U3CEndQuizU3Ed__12_System_IDisposable_Dispose_m4D6FA0D1FA679C4720FD5B499F3A0C281718C46A (void);
-// 0x0000004E System.Boolean Quiz/<EndQuiz>d__12::MoveNext()
+// 0x00000052 System.Boolean Quiz/<EndQuiz>d__12::MoveNext()
 extern void U3CEndQuizU3Ed__12_MoveNext_mF83BF3AB666D47F657AA1F4AA9E322CF76A510EB (void);
-// 0x0000004F System.Object Quiz/<EndQuiz>d__12::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000053 System.Object Quiz/<EndQuiz>d__12::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CEndQuizU3Ed__12_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m43ABC04F0672F7FAC819D7C09C7AB215A0534DC1 (void);
-// 0x00000050 System.Void Quiz/<EndQuiz>d__12::System.Collections.IEnumerator.Reset()
+// 0x00000054 System.Void Quiz/<EndQuiz>d__12::System.Collections.IEnumerator.Reset()
 extern void U3CEndQuizU3Ed__12_System_Collections_IEnumerator_Reset_mF3ED8F33792C7E69DB4BADFA51D22D1D744DA802 (void);
-// 0x00000051 System.Object Quiz/<EndQuiz>d__12::System.Collections.IEnumerator.get_Current()
+// 0x00000055 System.Object Quiz/<EndQuiz>d__12::System.Collections.IEnumerator.get_Current()
 extern void U3CEndQuizU3Ed__12_System_Collections_IEnumerator_get_Current_m2ACC6D881A140CE70C8A8950AFAF84153E06FAD4 (void);
-static Il2CppMethodPointer s_methodPointers[81] = 
+static Il2CppMethodPointer s_methodPointers[85] = 
 {
 	Crouch_get_IsCrouched_m8021AD022A7B374B3B874ADC220EF7C450E8953D,
 	Crouch_set_IsCrouched_m0E68FE1FCB4B9AB458FDB6ED63274E3E18500DEF,
@@ -243,6 +251,10 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	Button_buttonWrong_m18054BB637478EA2009DB494815CDCBF931B7894,
 	Button_buttonRight_m825490755267C44C5A2F7EE9C5BE6CBB8F334B7C,
 	Button__ctor_m6CC103D3CBE7ABCDC685DCC02F320D62DCC05D16,
+	CollisionTrigger_Start_m348E50A4E29C33A5A7FBEE67D3E2ABCB176ED818,
+	CollisionTrigger_Update_m2AA0A3EDFE0FB4B389605BFACE60B61CEDCFD198,
+	CollisionTrigger_OnTriggerEnter_m9D78045A1E926C96551E7B6285F578DC1C53F5A3,
+	CollisionTrigger__ctor_m4B74BF0FFAD0B10A01236F32592566B88E81DA2D,
 	Main_Start_m5864CE07B60D35921FE23903087087FC5C3CF8FD,
 	Main_Update_m6A75833947272413C503ECE10B0D91F56F193526,
 	Main__ctor_mC5886B5D00EEF6A6D8F96F3A84762F8AD71E51B6,
@@ -258,7 +270,7 @@ static Il2CppMethodPointer s_methodPointers[81] =
 	U3CEndQuizU3Ed__12_System_Collections_IEnumerator_Reset_mF3ED8F33792C7E69DB4BADFA51D22D1D744DA802,
 	U3CEndQuizU3Ed__12_System_Collections_IEnumerator_get_Current_m2ACC6D881A140CE70C8A8950AFAF84153E06FAD4,
 };
-static const int32_t s_InvokerIndices[81] = 
+static const int32_t s_InvokerIndices[85] = 
 {
 	3325,
 	2747,
@@ -329,6 +341,10 @@ static const int32_t s_InvokerIndices[81] =
 	3478,
 	3478,
 	3478,
+	2809,
+	3478,
+	3478,
+	3478,
 	3478,
 	3478,
 	3478,
@@ -346,7 +362,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	81,
+	85,
 	s_methodPointers,
 	0,
 	NULL,

@@ -3101,12 +3101,16 @@ PrefabInstance:
       objectReference: {fileID: 1946160109}
     - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: speed
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 2107930738}
+    - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: canRun
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: cursor
       value: 
@@ -3119,6 +3123,10 @@ PrefabInstance:
       propertyPath: pointer
       value: 
       objectReference: {fileID: 1377522202}
+    - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
+      propertyPath: runSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5269945355364510514, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
       propertyPath: darkSkybox
       value: 
@@ -4996,8 +5004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: -20}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: 15.2521, y: -15.252}
+  m_SizeDelta: {x: 30.5043, y: 30.504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245723691
 MonoBehaviour:
@@ -5340,8 +5348,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.71, y: -19.25}
-  m_SizeDelta: {x: 40, y: 40}
+  m_AnchoredPosition: {x: 8.3, y: -13.473}
+  m_SizeDelta: {x: 31.4876, y: 28.4463}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377522204
 MonoBehaviour:

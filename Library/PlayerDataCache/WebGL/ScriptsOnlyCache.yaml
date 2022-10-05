@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - Button
+    - CollisionTrigger
     - FirstPersonLook
     - FirstPersonMovement
     - GroundCheck
@@ -17,6 +18,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -81,50 +90,58 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1752}
     - Class: 114
-      Script: {instanceID: 1982}
+      Script: {instanceID: 2088}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2814}
     - Class: 114
-      Script: {instanceID: 2754}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3158}
+      Script: {instanceID: 3264}
     - Class: 114
-      Script: {instanceID: 3492}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 3706}
+      Script: {instanceID: 3812}
     - Class: 114
-      Script: {instanceID: 4308}
+      Script: {instanceID: 4414}
     - Class: 114
-      Script: {instanceID: 4580}
+      Script: {instanceID: 4686}
     - Class: 114
-      Script: {instanceID: 5346}
+      Script: {instanceID: 5452}
     - Class: 114
-      Script: {instanceID: 5712}
+      Script: {instanceID: 5818}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 6068}
     - Class: 114
-      Script: {instanceID: 6114}
+      Script: {instanceID: 6220}
     - Class: 114
-      Script: {instanceID: 6458}
+      Script: {instanceID: 6564}
     - Class: 114
-      Script: {instanceID: 7798}
+      Script: {instanceID: 7842}
     - Class: 114
-      Script: {instanceID: 8400}
+      Script: {instanceID: 7906}
+    - Class: 114
+      Script: {instanceID: 8508}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -212,7 +229,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 507cbded564ab827425493b522f66dba
+      Hash: 136489d2402e43b2c742009803ed7bdc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FirstPersonMovement
@@ -434,7 +451,7 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
-      Hash: 1812b3662b2c7410a56980e061649217
+      Hash: 24462b1daf4b078ab38a037411cae872
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Button
@@ -914,13 +931,19 @@ ScriptsOnlyBuild:
     className: Crouch
   - hash:
       serializedVersion: 2
+      Hash: 28790b78ac162a34aaa6c335a2912df2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollisionTrigger
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 9336d0d9468872839d3c8984652ac43f
+      Hash: a8d7930aa64a869da17c0a1d2fa674c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Main
