@@ -14,6 +14,7 @@ public class Button : MonoBehaviour
     public Material inactiveMat;
     public Material wrongMat;
     public Material rightMat;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()

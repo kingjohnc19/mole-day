@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class Main : MonoBehaviour
 {
+    public CollisionTrigger doorTrigger;
+    private bool alreadyTriggered = false;
+    public Animator doorAnim;
+    public Button startButton;
     public int questionsAnswered;
     public int questionsCorrect;
     public TextMeshProUGUI scoreText;
@@ -24,8 +28,18 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (question1.quizActive == false && question1.answered == false)
+        if (doorTrigger.triggered && !alreadyTriggered)
         {
+            startButton.anim.SetBool("Up", true);
+            startButton.buttonActive();
+            alreadyTriggered = true;
+        }
+
+        if (question1.quizActive == false && question1.answered == false && startButton.selected)
+        {
+            startButton.buttonInactive();
+            startButton.anim.SetBool("Up", false);
+            doorAnim.SetBool("Closed", true);
             question1.StartQuiz();
         }
         if (question1.answered == true && question1.quizActive == false && question2.quizActive == false && question2.answered == false)
@@ -67,7 +81,6 @@ public class Main : MonoBehaviour
             questionsAnswered++;
             GameObject.Destroy(question4.gameObject);
         }
-
 
         if (questionsAnswered != 0)
         {

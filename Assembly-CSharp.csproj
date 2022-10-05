@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Jump.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\Crouch.cs" />
+    <Compile Include="Assets\Scripts\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
     <Compile Include="Assets\Mini First Person Controller\Scripts\Components\GroundCheck.cs" />
   </ItemGroup>
