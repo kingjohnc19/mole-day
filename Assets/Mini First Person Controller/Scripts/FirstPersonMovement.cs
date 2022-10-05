@@ -5,6 +5,7 @@ public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
     public GameObject cursor;
+    public GameObject pointer;
     public bool hovering;
     public GameObject camera;
     [Header("Running")]
@@ -50,20 +51,24 @@ public class FirstPersonMovement : MonoBehaviour
 
         //Cursor
         RaycastHit hit;
+        
         if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 2))
         {
             if (hit.collider.tag == "Interactable")
             {
-                cursor.SetActive(true);
+                cursor.SetActive(false);
+                pointer.SetActive(true);
                 hovering = true;
             } else
             {
-                cursor.SetActive(false);
+                cursor.SetActive(true);
+                pointer.SetActive(false);
                 hovering = false;
             }
         } else
         {
-            cursor.SetActive(false);
+            cursor.SetActive(true);
+            pointer.SetActive(false);
         }
 
         if (touchingWater && !inSubmarine)
