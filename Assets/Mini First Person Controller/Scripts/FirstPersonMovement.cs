@@ -53,7 +53,7 @@ public class FirstPersonMovement : MonoBehaviour
         //Cursor
         RaycastHit hit;
         
-        if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 2))
+        if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 2.5f))
         {
             if (hit.collider.tag == "Interactable")
             {
@@ -94,10 +94,10 @@ public class FirstPersonMovement : MonoBehaviour
         if (collision.transform.tag == "Water")
         {
             touchingWater = true;
-            RenderSettings.ambientLight = new Color(0.35f, 0.35f, 0.35f, 1);
+            RenderSettings.ambientLight = new Color(0.4f, 0.4f, 0.4f, 1);
             RenderSettings.skybox = darkSkybox;
             RenderSettings.fogColor = new Color(0f, 0.039f, 0.275f, 1);
-            RenderSettings.fogStartDistance = 10;
+            RenderSettings.fogStartDistance = 5;
             RenderSettings.fogEndDistance = 30;
         }
         if (collision.transform.tag == "Submarine")
@@ -115,7 +115,7 @@ public class FirstPersonMovement : MonoBehaviour
             RenderSettings.skybox = skybox;
             RenderSettings.fogColor = Color.white;
             RenderSettings.fogStartDistance = 15;
-            RenderSettings.fogEndDistance = 85;
+            RenderSettings.fogEndDistance = 80;
         }
         if (collision.transform.tag == "Submarine")
         {
