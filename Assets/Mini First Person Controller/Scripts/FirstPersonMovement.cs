@@ -18,6 +18,7 @@ public class FirstPersonMovement : MonoBehaviour
     private bool inSubmarine;
     public Material skybox;
     public Material darkSkybox;
+    public GameObject mole;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -78,6 +79,14 @@ public class FirstPersonMovement : MonoBehaviour
         {
             tint.SetActive(false);
         }
+
+        if (inSubmarine)
+        {
+            transform.SetParent(mole.transform);
+        } else
+        {
+            transform.SetParent(null);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -85,11 +94,11 @@ public class FirstPersonMovement : MonoBehaviour
         if (collision.transform.tag == "Water")
         {
             touchingWater = true;
-            RenderSettings.ambientLight = Color.black;
+            RenderSettings.ambientLight = new Color(0.35f, 0.35f, 0.35f, 1);
             RenderSettings.skybox = darkSkybox;
-            RenderSettings.fogColor = Color.black;
-            RenderSettings.fogStartDistance = 5;
-            RenderSettings.fogEndDistance = 20;
+            RenderSettings.fogColor = new Color(0f, 0.039f, 0.275f, 1);
+            RenderSettings.fogStartDistance = 10;
+            RenderSettings.fogEndDistance = 30;
         }
         if (collision.transform.tag == "Submarine")
         {

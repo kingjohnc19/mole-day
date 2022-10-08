@@ -17,6 +17,8 @@ IL2CPP_EXTERN_C const Il2CppMethodPointer g_Il2CppGenericMethodPointers[];
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_Il2CppGenericAdjustorThunks[];
 IL2CPP_EXTERN_C const InvokerMethod g_Il2CppInvokerPointers[];
 IL2CPP_EXTERN_C const Il2CppMethodPointer g_UnresolvedVirtualMethodPointers[];
+IL2CPP_EXTERN_C const Il2CppMethodPointer g_UnresolvedInstanceMethodPointers[];
+IL2CPP_EXTERN_C const Il2CppMethodPointer g_UnresolvedStaticMethodPointers[];
 IL2CPP_EXTERN_C Il2CppInteropData g_Il2CppInteropData[];
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
@@ -87,14 +89,16 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	2,
 	g_ReversePInvokeWrapperPointers,
-	20142,
+	26420,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	5207,
+	5892,
 	g_Il2CppInvokerPointers,
-	730,
+	1143,
 	g_UnresolvedVirtualMethodPointers,
-	291,
+	g_UnresolvedInstanceMethodPointers,
+	g_UnresolvedStaticMethodPointers,
+	293,
 	g_Il2CppInteropData,
 	0,
 	NULL,

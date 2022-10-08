@@ -10,6 +10,7 @@ public class Main : MonoBehaviour
     public CollisionTrigger doorTrigger;
     private bool alreadyTriggered = false;
     public Animator doorAnim;
+    public Animator moleAnim;
     public Button startButton;
     public int questionsAnswered;
     public int questionsCorrect;
@@ -39,6 +40,7 @@ public class Main : MonoBehaviour
         {
             startButton.buttonInactive();
             startButton.anim.SetBool("Up", false);
+            moleAnim.SetTrigger("move1to2");
             doorAnim.SetBool("Closed", true);
             question1.StartQuiz();
         }
